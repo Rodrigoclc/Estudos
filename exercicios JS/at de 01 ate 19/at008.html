@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício 08</title>
+</head>
+<body>
+    <script>
+        var metro = Number(window.prompt('Digite uma distância em metros:'))
+        var km = metro / 1000
+        var hm = metro / 100
+        var dam = metro / 10
+        var dm = metro * 10
+        var cm = metro * 100
+        var mm = metro * 1000
+        document.write(`A distância de ${metro} metros corresponde a:<BR/>`)
+        document.write(`${km.toFixed(2).replace('.', ',')}km<BR/>`)
+        document.write(`${hm.toFixed(2).replace('.', ',')}hm<BR/>`)
+        document.write(`${dam.toFixed(2).replace('.', ',')}Dam<BR/>`)
+        document.write(`${dm.toFixed(2).replace('.', ',')}dm<BR/>`)
+        document.write(`${cm.toFixed(2).replace('.', ',')}cm<BR/>`)
+        document.write(`${mm.toFixed(2).replace('.', ',')}mm<BR/>`)
+    </script>
+</body>
+</html>

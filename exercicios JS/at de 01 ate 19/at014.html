@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício 014</title>
+</head>
+<body>
+    <script>
+        var km = Number(window.prompt('Qual foi a quantidade de km percurrido?'))
+        var diaria = Number(window.prompt('Por quantos dias você alugou o carro?'))
+        var preço = (diaria * 90) + (km *0.20)
+        document.write(`O preço a ser pago é de ${preço.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+    </script>
+</body>
+</html>

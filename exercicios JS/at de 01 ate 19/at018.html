@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>exercício 018</title>
+</head>
+<body>
+    <h1>Eleições</h1>
+    Em qual ano você nasceu? <input type="number" name="cxidade" id="cxidade">
+    <input id="ver1" type="button" value="verificar">
+    <div id="div1">
+    <script>
+        var inputano = window.document.querySelector('input#cxidade')
+        var div1texto = window.document.querySelector('div#div1')
+        var btverificar = window.document.querySelector('input#ver1')
+        btverificar.addEventListener('click', verificar)
+        function verificar() {
+            var anonascimento = Number(inputano.value)
+            var idade = 2023 - anonascimento
+            div1texto.innerHTML = `<p>Sua idade atual é de ${idade} anos<p>`
+                if (idade < 16) {
+                //document.write('ok')
+                div1texto.innerHTML += `<p>Você não vota!<p>`
+                } else if (idade < 18) {
+                    div1texto.innerHTML += `<p>Seu voto é opcional!<p>`
+                } else if (idade < 65) {
+                    div1texto.innerHTML += `<p>Voto obrigatorio!<p>`
+                } else if (idade >= 65) {
+                    div1texto.innerHTML += `<p>Seu voto é opcional!<p>`
+                }
+            
+        }
+    </script>
+</body>
+</html>

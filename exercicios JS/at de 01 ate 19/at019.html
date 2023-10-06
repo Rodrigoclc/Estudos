@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício 019</title>
+</head>
+<body>
+    <h1>Avaliação escolar</h1>
+    Qual seu nome? <input type="text" name="nomecx" id="nomecx"> <br>
+    Qual foi sua primeira nota? <input type="text" name="notacx1" id="notacx1"> <br>
+    Qual foi sua segunda nota? <input type="number" name="notacx2" id="notacx2">
+    <input id="ok1" type="button" value="ok">
+    <div id="div1">
+    <script>
+        var nomecx = window.document.querySelector('input#nomecx')
+        var notacx1 = window.document.querySelector('input#notacx1')
+        var notacx2 = window.document.querySelector('input#notacx2')
+        var div1 = window.document.querySelector('div#div1')
+        var ok1 = window.document.querySelector('input#ok1')
+        ok1.addEventListener('click', clicar)
+        function clicar() {
+            //document.write('ok')
+            var aluno = (nomecx.value)
+            var nota1 = Number(notacx1.value)
+            var nota2 = Number(notacx2.value)
+            var media = (nota1 + nota2) / 2
+            div1.innerHTML = `<p>Olá ${aluno}, sua media e de ${media}!<p>`
+            if (media >= 7) {
+                div1.innerHTML += `<p>Você teve um bom aproveitamento!<p>`
+            } else {
+                div1.innerHTML += `<p>Você não teve um bom aproveitamento!<p>`
+            }
+        }
+
+
+    </script>
+    
+
+</body>
+</html>

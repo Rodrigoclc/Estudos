@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício 013</title>
+</head>
+<body>
+    <script>
+        var salario = Number(window.prompt('Digite seu salário atual:'))
+        var nsalario = (salario * 0.15) + salario
+        var aumento = salario * 0.15
+        // n1.toLocalestring(‘pt-BR', {style: 'currency', currency: 'BRL’})
+        document.write(`Seu aumento salarial é de ${aumento.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}, logo seu novo salário é de ${nsalario.toLocaleString('pt-BR' , {style: 'currency', currency: 'BRL'})}`)
+    </script>
+</body>
+</html>

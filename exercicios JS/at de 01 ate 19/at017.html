@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício 017</title>
+</head>
+<body>
+    <h1>Sistema de Múltas</h1>
+    Qual sua Velocidade? <input type="number" name="vel" id="vel">
+    <input id="confirmaçao" type="button" value="verificar">
+    <div id="texto">
+    <script>
+        var caixat1 = window.document.querySelector('input#vel') //caixat1 é a primeira caixa de texto
+        var textodiv1 = window.document.querySelector('div#texto') //textodiv1 é a primeira div
+        var ok1 = window.document.querySelector('input#confirmaçao') //ok1 é o primeiro botão de ok
+        ok1.addEventListener('click', calcular)
+        function calcular() {
+            var multa = Number(caixat1.value)
+            textodiv1.innerHTML = `<p>Sua velocidade atual é de <strong>${multa}Km/h<strong><p>`
+            if (multa > 80) {
+                var valormulta = (multa - 80) * 5
+                textodiv1.innerHTML += `<p>Você foi <strong>MULTADO</strong> em <strong>${valormulta.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</strong>, por últrapassar o limite de velocidade<p>`
+            } else {
+                textodiv1.innerHTML += `Dirija sempre com segurança!`
+            }
+        }
+    </script>
+</body>
+</html>

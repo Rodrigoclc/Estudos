@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício 09</title>
+</head>
+<body>
+    <script>
+        var reais = Number(window.prompt('Digite quando você tem em reias na carteira:'))
+        var dolar = reais / 3.45
+        document.write(`Você consegue comprar ${dolar.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'})}`) 
+    </script>
+</body>
+</html>

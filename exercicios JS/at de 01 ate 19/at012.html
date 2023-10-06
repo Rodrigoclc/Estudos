@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício 012</title>
+</head>
+<body>
+    <script>
+        var preço = Number(window.prompt('Digite o preço do produto:'))
+        var desconto = preço - (preço * 0.05)
+        document.write(`${preço.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} com 5% de desconto fica ${desconto.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+    </script>
+</body>
+</html>
